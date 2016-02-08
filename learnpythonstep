@@ -1,0 +1,7 @@
+d = int(input())
+d_list = set([input().lower() for x in range(d)])
+l = int(input())
+l_list = [input().lower().split(' ') for x in range(l)]
+words = set([word for list in l_list for word in list if word not in d_list])
+for word in words:
+    print(word)
